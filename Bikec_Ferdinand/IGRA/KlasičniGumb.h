@@ -1,7 +1,6 @@
 ﻿#pragma once
-#include <string>
 #include <SDL.h>
-#include "../CORE/VECTOR/Vector.h"
+#include "../CORE/TextureComponent.h"
 
 enum class ButtonTypes {
 	Play,
@@ -13,16 +12,12 @@ enum class ButtonTypes {
 
 class KlasičniGumb{
 public:
-	KlasičniGumb(std::string baseTextureID, std::string hoverTextureID, float x, float y, int width, int height, SDL_RendererFlip flip, std::string levelName, ButtonTypes buttonType);
-	virtual void Draw();
-	virtual void Update();
+	KlasičniGumb(const char* baseTexturePath, const char* hoverTexturePath, int x, int y, int w, int h, float scale,  SDL_Renderer* r, SDL_RendererFlip flip, ButtonTypes buttonType);
+	void Draw();
+	void Update();
 private:
-	ButtonTypes tipGumba;
-	std::string trenutnaTextura;
-	std::string m_HoverTextureID;
-	std::string m_BaseTextureID, m_LevelID;
-	Vector2D* m_Position;
-	Vector2D* m_Size;
-	SDL_RendererFlip m_Flip;
+	ButtonTypes _buttonType;
+	TextureComponent *_baseTexture, *_hoverTexture;
+
 };
 

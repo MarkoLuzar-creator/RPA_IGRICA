@@ -26,7 +26,7 @@ int main() {
 
 	Window::GetInstance().CreateWindow(1920, 1080, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
 
-	#pragma region Assets
+	#pragma region Texture
 	Texture::GetInstance().Load("player_idle", "../Assets/player_jump.png");
 	Texture::GetInstance().Load("player_running", "../Assets/player_roll.png");
 	Texture::GetInstance().Load("arena", "../Assets/arena.png");
@@ -37,12 +37,8 @@ int main() {
 	Texture::GetInstance().Load("igralec", "../Assets/player.png");
 	Texture::GetInstance().Load("pesek", "../Assets/pesek.jpg");
 	Texture::GetInstance().Load("kamen", "../Assets/kamen.jpg");
-	Texture::GetInstance().Load("playButtonBase", "../Assets/Gumbi0/igraj.png");
-	Texture::GetInstance().Load("playButtonHover", "../Assets/Gumbi1/igraj.png");
-	Texture::GetInstance().Load("exitButtonBase", "../Assets/Gumbi0/izhod.png");
-	Texture::GetInstance().Load("exitButtonHover", "../Assets/Gumbi1/izhod.png");
-	Texture::GetInstance().Load("optionsButtonBase", "../Assets/Gumbi0/nastavitve.png");
-	Texture::GetInstance().Load("optionsButtonHover", "../Assets/Gumbi1/nastavitve.png");
+
+
 	Texture::GetInstance().Load("resolutionsButtonBase", "../Assets/Gumbi0/res.png");
 	Texture::GetInstance().Load("resolutionsButtonHover", "../Assets/Gumbi1/res.png");
 	Texture::GetInstance().Load("homeButtonBase", "../Assets/Gumbi0/domov.png");
@@ -50,10 +46,10 @@ int main() {
 	#pragma endregion
 
 	#pragma region Gumbi
-	KlasičniGumb start("playButtonBase", "playButtonHover", 0, -214, 301, 204, SDL_FLIP_NONE, "menu", ButtonTypes::Play);
-	KlasičniGumb nastavitve("optionsButtonBase", "optionsButtonHover", 0, 0, 301, 204, SDL_FLIP_NONE, "menu", ButtonTypes::Options);
-	KlasičniGumb exit("exitButtonBase", "exitButtonHover", 0, 214, 301, 204, SDL_FLIP_NONE, "menu", ButtonTypes::Exit);
-#pragma endregion
+	KlasičniGumb start("../Assets/Gumbi1/igraj.png", "../Assets/Gumbi1/igraj.png", 0, -214, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Play);
+	KlasičniGumb nastavitve("../Assets/Gumbi0/nastavitve.png", "../Assets/Gumbi1/nastavitve.png", 0, 0, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Options);
+	KlasičniGumb exit("../Assets/Gumbi0/izhod.png", "../Assets/Gumbi1/izhod.png", 0, 214, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Exit);
+	#pragma endregion
 
 
 
@@ -107,7 +103,7 @@ int main() {
 			i->Draw();
 			i->Update();
 		}
-
+		
 		start.Draw();
 		start.Update();
 		nastavitve.Draw();

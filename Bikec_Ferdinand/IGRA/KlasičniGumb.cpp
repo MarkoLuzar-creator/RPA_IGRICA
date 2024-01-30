@@ -7,38 +7,34 @@
 #include "Igralec.h"
 #include <iostream>
 
-KlasičniGumb::KlasičniGumb(std::string baseTextureID, std::string hoverTextureID, float x, float y, int width, int height, SDL_RendererFlip flip, std::string levelName, ButtonTypes buttonType){
-	trenutnaTextura = baseTextureID;
-	tipGumba = buttonType;
-	m_Position = new Vector2D(x, y);
-	m_Size = new Vector2D(width, height);
-	m_BaseTextureID = baseTextureID;
-	m_LevelID = levelName;
-	m_Flip = flip;
-	m_HoverTextureID = hoverTextureID;
-	//Vector::GetInstance().m_SeznamKlasičnihGumbov.push_back(this);
+
+KlasičniGumb::KlasičniGumb(const char* baseTexturePath, const char* hoverTexturePath, int x, int y, int w, int h, float scale, SDL_Renderer* r, SDL_RendererFlip flip, ButtonTypes buttonType){
+	_baseTexture = new TextureComponent(hoverTexturePath, x, y, w, h, r, scale, flip);
+	_hoverTexture = new TextureComponent(hoverTexturePath, x, y, w, h, r, scale, flip);
+	_buttonType = buttonType;
 }
 
 void KlasičniGumb::Draw(){
-	if (m_LevelID == Level::GetInstance().GetCurrentLevelName())
-	Texture::GetInstance().DrawStatic(trenutnaTextura, m_Position->m_X, m_Position->m_Y, m_Size->m_X, m_Size->m_Y, m_Flip);
+	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
+		_baseTexture->DrawS();
+	}
 }
 
 void KlasičniGumb::Update(){
-	if (m_LevelID == Level::GetInstance().GetCurrentLevelName()) {
-		trenutnaTextura = m_BaseTextureID;
+	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
 		Vector2D offset;
 		offset = Camera::GetInstance().GetPosition();
-		Vector2D pos = Window::GetInstance().GetScalePosition(m_Position->m_X, m_Position->m_Y, m_Size->m_X, m_Size->m_Y, offset);
-		Vector2D size = Window::GetInstance().GetScaleSize(m_Size->m_X, m_Size->m_Y);
+		Vector2D pos = Window::GetInstance().GetScalePosition(_baseTexture->_position.m_X, _baseTexture->_position.m_Y, _baseTexture->_size.m_X, _baseTexture->_size.m_Y, offset);
+		Vector2D size = Window::GetInstance().GetScaleSize(_baseTexture->_size.m_X, _baseTexture->_size.m_Y);
 
 		SDL_Rect button = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1};
 
 		if (SDL_HasIntersection(&mouse, &button)) {
-			trenutnaTextura = m_HoverTextureID;
+			_hoverTexture->DrawS();
+
 			if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT)) {
-				switch (tipGumba) {
+				switch (_buttonType) {
 				case ButtonTypes::Play: Level::GetInstance().NextLevel(); break;
 				case ButtonTypes::Exit: exit(0); break;
 				case ButtonTypes::Options: Level::GetInstance().SetLevel("options"); break;

@@ -159,6 +159,7 @@
     <ClCompile Include="IGRA\MiniMap.cpp" />
     <ClCompile Include="IGRA\Nasprotnik.cpp" />
     <ClCompile Include="IGRA\Mapa.cpp" />
+    <ClCompile Include="CORE\TextureComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IGRA\Arena.h" />
@@ -179,6 +180,7 @@
     <ClInclude Include="IGRA\Nasprotnik.h" />
     <ClInclude Include="CORE\PHYSICS\Math.h" />
     <ClInclude Include="IGRA\Mapa.h" />
+    <ClInclude Include="CORE\TextureComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
