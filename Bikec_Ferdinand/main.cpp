@@ -16,6 +16,7 @@
 #include "CORE/TIMER/Timer.h"
 #include "CORE/INPUT/Input.h"
 #include "IGRA/Mapa.h"
+#include "CORE/VECTOR/Vector.h"
 
 int main() {
     srand(time(0));
@@ -46,7 +47,7 @@ int main() {
 	#pragma endregion
 
 	#pragma region Gumbi
-	KlasičniGumb start("../Assets/Gumbi1/igraj.png", "../Assets/Gumbi1/igraj.png", 0, -214, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Play);
+	KlasičniGumb start("../Assets/Gumbi1/igraj.png", "../Assets/Gumbi1/igraj.png", 0, -214, 301, 204, 0.5f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Play);
 	KlasičniGumb nastavitve("../Assets/Gumbi0/nastavitve.png", "../Assets/Gumbi1/nastavitve.png", 0, 0, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Options);
 	KlasičniGumb exit("../Assets/Gumbi0/izhod.png", "../Assets/Gumbi1/izhod.png", 0, 214, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Exit);
 	#pragma endregion

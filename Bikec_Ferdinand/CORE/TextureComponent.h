@@ -10,6 +10,7 @@ public:
 	float _scale;
 	Vector2D _position, _size;
 	SDL_RendererFlip _flip;
+	SDL_Rect _hitbox;
 private:
 	SDL_Renderer* _renderer;
 	SDL_Texture* _texture;

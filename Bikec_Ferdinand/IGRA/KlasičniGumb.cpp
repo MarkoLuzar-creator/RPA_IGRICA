@@ -16,22 +16,19 @@ KlasičniGumb::KlasičniGumb(const char* baseTexturePath, const char* hoverTextu
 
 void KlasičniGumb::Draw(){
 	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
-		_baseTexture->DrawS();
+		_baseTexture->DrawD();
 	}
 }
 
 void KlasičniGumb::Update(){
 	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
-		Vector2D offset;
-		offset = Camera::GetInstance().GetPosition();
-		Vector2D pos = Window::GetInstance().GetScalePosition(_baseTexture->_position.m_X, _baseTexture->_position.m_Y, _baseTexture->_size.m_X, _baseTexture->_size.m_Y, offset);
-		Vector2D size = Window::GetInstance().GetScaleSize(_baseTexture->_size.m_X, _baseTexture->_size.m_Y);
 
-		SDL_Rect button = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
+
+		SDL_Rect button = _baseTexture->_hitbox;
 		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1};
 
 		if (SDL_HasIntersection(&mouse, &button)) {
-			_hoverTexture->DrawS();
+			_hoverTexture->DrawD();
 
 			if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT)) {
 				switch (_buttonType) {

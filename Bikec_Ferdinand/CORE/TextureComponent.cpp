@@ -20,6 +20,8 @@ TextureComponent::TextureComponent(const char* filePath, int x, int y, int w, in
 	_renderer = renderer;
 	_flip = f;
 	_scale = scale;
+	SDL_Rect hitbox = { _position.m_X, _position.m_Y, _size.m_X, _size.m_Y };
+	_hitbox = hitbox;
 }
 
 void TextureComponent::DrawS(){
@@ -30,6 +32,8 @@ void TextureComponent::DrawS(){
 	SDL_Rect srcRect = { 0, 0, _size.m_X, _size.m_Y };
 	SDL_Rect destRect = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 	SDL_RenderCopyEx(_renderer, _texture, &srcRect, &destRect, 0, nullptr, _flip);
+	SDL_Rect hitbox = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
+	_hitbox = hitbox;
 }
 
 void TextureComponent::DrawD(){
@@ -40,4 +44,6 @@ void TextureComponent::DrawD(){
 	SDL_Rect srcRect = { 0, 0, _size.m_X, _size.m_Y };
 	SDL_Rect destRect = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 	SDL_RenderCopyEx(_renderer, _texture, &srcRect, &destRect, 0, nullptr, _flip);
+	SDL_Rect hitbox = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
+	_hitbox = hitbox;
 }
