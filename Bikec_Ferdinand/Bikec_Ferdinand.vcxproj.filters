@@ -45,7 +45,7 @@
     <ClCompile Include="IGRA\KlasičniGumb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IGRA\StaticSlika.cpp">
+    <ClCompile Include="IGRA\Ozadje.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IGRA\Igralec.cpp">
@@ -58,9 +58,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IGRA\Nasprotnik.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IGRA\Mapa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CORE\TextureComponent.cpp">
@@ -101,7 +98,7 @@
     <ClInclude Include="IGRA\KlasičniGumb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IGRA\StaticSlika.h">
+    <ClInclude Include="IGRA\Ozadje.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGRA\Igralec.h">
@@ -117,9 +114,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\PHYSICS\Math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IGRA\Mapa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\TextureComponent.h">

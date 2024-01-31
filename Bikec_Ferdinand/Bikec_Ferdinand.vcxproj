@@ -155,10 +155,9 @@
     <ClCompile Include="CORE\PHYSICS\Vector2D.cpp" />
     <ClCompile Include="CORE\TEXTURE\Texture.cpp" />
     <ClCompile Include="CORE\TIMER\Timer.cpp" />
-    <ClCompile Include="IGRA\StaticSlika.cpp" />
+    <ClCompile Include="IGRA\Ozadje.cpp" />
     <ClCompile Include="IGRA\MiniMap.cpp" />
     <ClCompile Include="IGRA\Nasprotnik.cpp" />
-    <ClCompile Include="IGRA\Mapa.cpp" />
     <ClCompile Include="CORE\TextureComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -175,11 +174,10 @@
     <ClInclude Include="CORE\TEXTURE\Texture.h" />
     <ClInclude Include="CORE\TIMER\Timer.h" />
     <ClInclude Include="IGRA\KlasičniGumb.h" />
-    <ClInclude Include="IGRA\StaticSlika.h" />
+    <ClInclude Include="IGRA\Ozadje.h" />
     <ClInclude Include="IGRA\MiniMap.h" />
     <ClInclude Include="IGRA\Nasprotnik.h" />
     <ClInclude Include="CORE\PHYSICS\Math.h" />
-    <ClInclude Include="IGRA\Mapa.h" />
     <ClInclude Include="CORE\TextureComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

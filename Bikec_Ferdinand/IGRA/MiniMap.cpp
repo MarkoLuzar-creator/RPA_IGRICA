@@ -1,7 +1,6 @@
 #include "MiniMap.h"
 #include "../CORE/TEXTURE/Texture.h"
 #include "../CORE/LEVEL/Level.h"
-#include "StaticSlika.h"
 #include "../CORE/VECTOR/Vector.h"
 #include "../IGRA/Igralec.h"
 #include "../CORE/PHYSICS/Math.h"

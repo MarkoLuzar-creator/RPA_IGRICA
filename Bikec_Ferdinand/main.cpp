@@ -2,7 +2,6 @@
 
 #include "CORE/WINDOW/Window.h"
 #include "IGRA/KlasičniGumb.h"
-#include "IGRA/StaticSlika.h"
 #include "IGRA/Igralec.h"
 #include "CORE/CAMERA/Camera.h"
 #include "IGRA/MiniMap.h"
@@ -15,8 +14,9 @@
 #include "CORE/TEXTURE/Texture.h"
 #include "CORE/TIMER/Timer.h"
 #include "CORE/INPUT/Input.h"
-#include "IGRA/Mapa.h"
 #include "CORE/VECTOR/Vector.h"
+
+#include "IGRA/Ozadje.h"
 
 int main() {
     srand(time(0));
@@ -76,11 +76,18 @@ int main() {
 	Level::GetInstance().LoadLevels("level1");
 
 
-	Mapa a;
-	a.Init();
-
-
-    StaticSlika* ozadje = new StaticSlika("ozadje", 0, 0, 2000, 1333, SDL_FLIP_NONE, "menu");
+	#pragma once ozadja
+	Ozadje meni_ozadje("../Assets/ozadje.png", "menu", 0, 0, 2000, 1333, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+	std::vector<std::vector<Ozadje>> mapa;
+	for (int x = -MiniMap::worldSize; x < MiniMap::worldSize; x += 1000) {
+		std::vector<Ozadje> r;
+		for (int y = -MiniMap::worldSize; y < MiniMap::worldSize; y += 1000) {
+			Ozadje tile("../Assets/pesek.jpg", "level1", x, y, 1000, 1000, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+			r.push_back(tile);
+		}
+		mapa.push_back(r);
+	}
+	#pragma endregion ozadja
 	
 	while (true) {
 		Timer::GetInstance().Tick();
@@ -98,19 +105,22 @@ int main() {
 
 		Window::GetInstance().WindowClear();
 
-		a.Draw();
 
-		for (StaticSlika* i : Vector::GetInstance().m_SeznamStatičnihSlik) {
-			i->Draw();
-			i->Update();
-		}
-		
+		meni_ozadje.Update();
+
 		start.Draw();
 		start.Update();
 		nastavitve.Draw();
 		nastavitve.Update();
 		exit.Draw();
 		exit.Update();
+
+		for (int i = 0, x = -MiniMap::worldSize; x < MiniMap::worldSize; i++, x += 1000) {
+			for (int j = 0, y = -MiniMap::worldSize; y < MiniMap::worldSize; j++, y += 1000) {
+				mapa[i][j].Update();
+			}
+		}
+
 
 
 		for (Arena* i : Vector::GetInstance().m_SeznamAren) {
