@@ -31,12 +31,10 @@ int main() {
 	Texture::GetInstance().Load("player_idle", "../Assets/player_jump.png");
 	Texture::GetInstance().Load("player_running", "../Assets/player_roll.png");
 	Texture::GetInstance().Load("arena", "../Assets/arena.png");
-	Texture::GetInstance().Load("ozadje", "../Assets/ozadje.png");
 	Texture::GetInstance().Load("miniMap", "../Assets/miniMap.jpg");
 	Texture::GetInstance().Load("nasprotnik", "../Assets/nasprotnik.png");
 	Texture::GetInstance().Load("igralec", "../Assets/player.png");
 	Texture::GetInstance().Load("igralec", "../Assets/player.png");
-	Texture::GetInstance().Load("pesek", "../Assets/pesek.jpg");
 	Texture::GetInstance().Load("kamen", "../Assets/kamen.jpg");
 
 
@@ -46,14 +44,24 @@ int main() {
 	Texture::GetInstance().Load("homeButtonHover", "../Assets/Gumbi1/domov.png");
 	#pragma endregion
 
-	#pragma region Gumbi
+	#pragma region gumbi
 	KlasičniGumb start("../Assets/Gumbi1/igraj.png", "../Assets/Gumbi1/igraj.png", 0, -214, 301, 204, 0.5f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Play);
 	KlasičniGumb nastavitve("../Assets/Gumbi0/nastavitve.png", "../Assets/Gumbi1/nastavitve.png", 0, 0, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Options);
 	KlasičniGumb exit("../Assets/Gumbi0/izhod.png", "../Assets/Gumbi1/izhod.png", 0, 214, 301, 204, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Exit);
 	#pragma endregion
 
-
-
+	#pragma region ozadja
+	Ozadje meni_ozadje("../Assets/ozadje.png", "menu", 0, 0, 2000, 1333, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+	std::vector<std::vector<Ozadje>> mapa;
+	for (int x = -MiniMap::worldSize; x < MiniMap::worldSize; x += 1000) {
+		std::vector<Ozadje> r;
+		for (int y = -MiniMap::worldSize; y < MiniMap::worldSize; y += 1000) {
+			Ozadje tile("../Assets/pesek.jpg", "level1", x, y, 1000, 1000, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+			r.push_back(tile);
+		}
+		mapa.push_back(r);
+	}
+	#pragma endregion
 
     Igralec::GetInstance().SetProperties("player_idle", 0, 0, 64, 64, SDL_FLIP_NONE);
     MiniMap::GetInstance().SetProperties("miniMap", 1920 / 2 - 600 / 2, 1080 / 2 - 600 / 2, 600, 600, SDL_FLIP_NONE);
@@ -74,20 +82,6 @@ int main() {
 
 	Level::GetInstance().LoadLevels("menu");
 	Level::GetInstance().LoadLevels("level1");
-
-
-	#pragma once ozadja
-	Ozadje meni_ozadje("../Assets/ozadje.png", "menu", 0, 0, 2000, 1333, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
-	std::vector<std::vector<Ozadje>> mapa;
-	for (int x = -MiniMap::worldSize; x < MiniMap::worldSize; x += 1000) {
-		std::vector<Ozadje> r;
-		for (int y = -MiniMap::worldSize; y < MiniMap::worldSize; y += 1000) {
-			Ozadje tile("../Assets/pesek.jpg", "level1", x, y, 1000, 1000, 1, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
-			r.push_back(tile);
-		}
-		mapa.push_back(r);
-	}
-	#pragma endregion ozadja
 	
 	while (true) {
 		Timer::GetInstance().Tick();
@@ -115,9 +109,9 @@ int main() {
 		exit.Draw();
 		exit.Update();
 
-		for (int i = 0, x = -MiniMap::worldSize; x < MiniMap::worldSize; i++, x += 1000) {
-			for (int j = 0, y = -MiniMap::worldSize; y < MiniMap::worldSize; j++, y += 1000) {
-				mapa[i][j].Update();
+		for (auto& i : mapa) {
+			for (auto& t : i) {
+				t.Update();
 			}
 		}
 
