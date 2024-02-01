@@ -5,7 +5,7 @@
 #include "IGRA/Igralec.h"
 #include "CORE/CAMERA/Camera.h"
 #include "IGRA/MiniMap.h"
-#include "IGRA/Arena.h"
+#include "IGRA/Laboratoriji.h"
 #include "IGRA/Nasprotnik.h"
 #include <vector>
 #include <ctime>
@@ -62,13 +62,8 @@ int main() {
 	}
 	#pragma endregion
 
-	#pragma region laboratorij
-	for (int i = 0; i < 15; i++) {
-		int x = rand() % (2 * (int)MiniMap::worldSize) - MiniMap::worldSize;
-		int y = rand() % (2 * (int)MiniMap::worldSize) - MiniMap::worldSize;
-		Arena* arena = new Arena("../Assets/arena.png", "level1", x, y, 1152, 1152, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
-	}
-	#pragma endregion
+	Laboratoriji::GetInstance().Init();
+
 
     Igralec::GetInstance().SetProperties("player_idle", 0, 0, 64, 64, SDL_FLIP_NONE);
     MiniMap::GetInstance().SetProperties("miniMap", 1920 / 2 - 600 / 2, 1080 / 2 - 600 / 2, 600, 600, SDL_FLIP_NONE);
@@ -117,12 +112,9 @@ int main() {
 			}
 		}
 
+		Laboratoriji::GetInstance().Draw();
+		Laboratoriji::GetInstance().Update();
 
-
-		for (Arena i : Arena::_arene) {
-			i.Draw();
-			i.Update();
-		}
 
 		for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {
 			i->Draw();

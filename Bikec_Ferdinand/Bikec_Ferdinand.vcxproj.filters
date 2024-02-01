@@ -54,7 +54,7 @@
     <ClCompile Include="IGRA\MiniMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IGRA\Arena.cpp">
+    <ClCompile Include="IGRA\Laboratoriji.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IGRA\Nasprotnik.cpp">
@@ -107,7 +107,7 @@
     <ClInclude Include="IGRA\MiniMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IGRA\Arena.h">
+    <ClInclude Include="IGRA\Laboratoriji.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGRA\Nasprotnik.h">
@@ -117,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\TextureComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

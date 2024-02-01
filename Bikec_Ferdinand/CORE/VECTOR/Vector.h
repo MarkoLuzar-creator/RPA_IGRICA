@@ -1,7 +1,5 @@
 ﻿#pragma once
 #include <vector>
-//#include "../../IGRA/StaticSlika.h"
-#include "../../IGRA/Arena.h"
 #include "../../IGRA/Nasprotnik.h"
 
 class Vector{

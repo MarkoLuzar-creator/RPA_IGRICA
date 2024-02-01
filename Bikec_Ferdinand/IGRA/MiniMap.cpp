@@ -6,6 +6,7 @@
 #include "../CORE/PHYSICS/Math.h"
 #include "../CORE/INPUT/Input.h"
 #include "../IGRA/Ozadje.h"
+#include "../IGRA/Laboratoriji.h"
 #include <iostream>
 
 float MiniMap::worldSize = 10000;
@@ -16,15 +17,15 @@ void MiniMap::Draw(){
     if (Level::GetInstance().GetCurrentLevelName() != "menu" && Level::GetInstance().GetCurrentLevelName() != "options" && toggle) {
         Texture::GetInstance().DrawStatic(m_BaseTextureID, m_Position->m_X, m_Position->m_Y, 600, 600, m_Flip);
 
-        for (Arena& i : Arena::_arene) {
-            if (Math::GetInstance().GetDistanceFromPoints(Igralec::GetInstance().GetOrigin(), i._texture->_position) < viewDistance) {
-                if (i._pushanIndex == Arena::m_ArenaIndex && i._level == Level::GetInstance().GetCurrentLevelName()) {
-                    TextureComponent t(*i._texture);
-                    t._position.m_X = m_Position->m_X + (t._position.m_X / m_MapScale);
-                    t._position.m_Y = m_Position->m_Y + (t._position.m_Y / m_MapScale);
-                    t._scale = 0.02;
-                    t.DrawS();
-                }
+        
+        if (Laboratoriji::GetInstance()._list[Laboratoriji::GetInstance()._indexPrikazanegaElementa]._level == Level::GetInstance().GetCurrentLevelName()) {
+            if (Math::GetInstance().GetDistanceFromPoints(Igralec::GetInstance().GetOrigin(), Laboratoriji::GetInstance()._list[Laboratoriji::GetInstance()._indexPrikazanegaElementa]._texture->_position) < viewDistance) {
+
+                TextureComponent t(*Laboratoriji::GetInstance()._list[Laboratoriji::GetInstance()._indexPrikazanegaElementa]._texture);
+                t._position.m_X = m_Position->m_X + (t._position.m_X / m_MapScale);
+                t._position.m_Y = m_Position->m_Y + (t._position.m_Y / m_MapScale);
+                t._scale = 0.02;
+                t.DrawS();
             }
         }
 

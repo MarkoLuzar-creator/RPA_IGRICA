@@ -143,7 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="IGRA\Arena.cpp" />
+    <ClCompile Include="IGRA\Laboratoriji.cpp" />
     <ClCompile Include="CORE\ANIMATION\Animation.cpp" />
     <ClCompile Include="CORE\LEVEL\Level.cpp" />
     <ClCompile Include="CORE\INPUT\Input.cpp" />
@@ -161,7 +161,8 @@
     <ClCompile Include="CORE\TextureComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IGRA\Arena.h" />
+    <ClInclude Include="Engine\engine.h" />
+    <ClInclude Include="IGRA\Laboratoriji.h" />
     <ClInclude Include="IGRA\Igralec.h" />
     <ClInclude Include="CORE\CAMERA\Camera.h" />
     <ClInclude Include="CORE\ANIMATION\Animation.h" />
