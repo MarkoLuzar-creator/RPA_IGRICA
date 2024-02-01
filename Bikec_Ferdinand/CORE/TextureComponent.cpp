@@ -22,6 +22,11 @@ TextureComponent::TextureComponent(const char* filePath, int x, int y, int w, in
 	_scale = scale;
 	SDL_Rect hitbox = { _position.m_X, _position.m_Y, _size.m_X, _size.m_Y };
 	_hitbox = hitbox;
+	_filePath = filePath;
+}
+
+TextureComponent::TextureComponent(const TextureComponent& c){
+	*this = c;
 }
 
 void TextureComponent::DrawS(){

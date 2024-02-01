@@ -30,7 +30,6 @@ int main() {
 	#pragma region Texture
 	Texture::GetInstance().Load("player_idle", "../Assets/player_jump.png");
 	Texture::GetInstance().Load("player_running", "../Assets/player_roll.png");
-	Texture::GetInstance().Load("arena", "../Assets/arena.png");
 	Texture::GetInstance().Load("miniMap", "../Assets/miniMap.jpg");
 	Texture::GetInstance().Load("nasprotnik", "../Assets/nasprotnik.png");
 	Texture::GetInstance().Load("igralec", "../Assets/player.png");
@@ -63,6 +62,14 @@ int main() {
 	}
 	#pragma endregion
 
+	#pragma region laboratorij
+	for (int i = 0; i < 15; i++) {
+		int x = rand() % (2 * (int)MiniMap::worldSize) - MiniMap::worldSize;
+		int y = rand() % (2 * (int)MiniMap::worldSize) - MiniMap::worldSize;
+		Arena* arena = new Arena("../Assets/arena.png", "level1", x, y, 1152, 1152, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+	}
+	#pragma endregion
+
     Igralec::GetInstance().SetProperties("player_idle", 0, 0, 64, 64, SDL_FLIP_NONE);
     MiniMap::GetInstance().SetProperties("miniMap", 1920 / 2 - 600 / 2, 1080 / 2 - 600 / 2, 600, 600, SDL_FLIP_NONE);
 
@@ -71,12 +78,7 @@ int main() {
         int y = rand() % (2 * (int)MiniMap::worldSize) - MiniMap::worldSize;
         Nasprotnik* n = new Nasprotnik("player_idle", x, y, 64, 64, SDL_FLIP_NONE, "level1");
     }
- 
-    for (int i = 0; i < 15; i++) {
-        int x = rand() % ( 2 *(int)MiniMap::worldSize) - MiniMap::worldSize;
-        int y = rand() % ( 2 *(int)MiniMap::worldSize) - MiniMap::worldSize;
-        Arena* arena1 = new Arena("arena", x, y, 1152, 1152, SDL_FLIP_NONE, "level1");
-    }
+	
 
 	Camera::GetInstance().SetOriginPosition(0, 0);
 
@@ -117,9 +119,9 @@ int main() {
 
 
 
-		for (Arena* i : Vector::GetInstance().m_SeznamAren) {
-			i->Draw();
-			i->Update();
+		for (Arena i : Arena::_arene) {
+			i.Draw();
+			i.Update();
 		}
 
 		for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {

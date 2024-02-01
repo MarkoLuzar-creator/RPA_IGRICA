@@ -1,22 +1,22 @@
 #pragma once
 #include <SDL.h>
+#include <vector>
 #include <string>
-#include "../CORE/PHYSICS/Vector2D.h"
+#include "../CORE/TextureComponent.h"
+#include "../IGRA/MiniMap.h"
 
 class Arena{
 public:
-	Arena(std::string baseTextureID, float x, float y, int width, int height, SDL_RendererFlip flip, std::string levelName);
+	Arena(const char* texture, const char* level, int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f);
 	virtual void Draw();
 	virtual void Update();
-	Vector2D& GetPosition();
-	Vector2D& GetSize();
-	std::string& GetTextureID();
-	SDL_Rect& GetHitbox();
 	static int m_ArenaIndex;
+	static std::vector<Arena> _arene;
+	static int _steviloAren;
+	friend class MiniMap;
 private:
-	SDL_Rect m_Hitbox{ 0, 0, 0, 0 };
-	std::string m_BaseTextureID, m_LevelID;
-	Vector2D* m_Position;
-	Vector2D* m_Size;
-	SDL_RendererFlip m_Flip;
+	int _pushanIndex;
+	const char* _level;
+	TextureComponent* _texture;
 };
+
