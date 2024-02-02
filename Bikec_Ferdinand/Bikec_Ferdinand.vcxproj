@@ -143,13 +143,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Igra.cpp" />
     <ClCompile Include="IGRA\Laboratoriji.cpp" />
     <ClCompile Include="CORE\ANIMATION\Animation.cpp" />
     <ClCompile Include="CORE\LEVEL\Level.cpp" />
     <ClCompile Include="CORE\INPUT\Input.cpp" />
     <ClCompile Include="IGRA\Igralec.cpp" />
-    <ClCompile Include="IGRA\KlasičniGumb.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="IGRA\Button.cpp" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="CORE\WINDOW\Window.cpp" />
     <ClCompile Include="CORE\PHYSICS\RigidBody.cpp" />
     <ClCompile Include="CORE\PHYSICS\Vector2D.cpp" />
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\engine.h" />
+    <ClInclude Include="src\Igra.h" />
     <ClInclude Include="IGRA\Laboratoriji.h" />
     <ClInclude Include="IGRA\Igralec.h" />
     <ClInclude Include="CORE\CAMERA\Camera.h" />
@@ -174,7 +176,7 @@
     <ClInclude Include="CORE\INPUT\Input.h" />
     <ClInclude Include="CORE\TEXTURE\Texture.h" />
     <ClInclude Include="CORE\TIMER\Timer.h" />
-    <ClInclude Include="IGRA\KlasičniGumb.h" />
+    <ClInclude Include="IGRA\Button.h" />
     <ClInclude Include="IGRA\Ozadje.h" />
     <ClInclude Include="IGRA\MiniMap.h" />
     <ClInclude Include="IGRA\Nasprotnik.h" />

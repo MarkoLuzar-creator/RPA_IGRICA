@@ -1,0 +1,15 @@
+#pragma once
+class Igra{
+public:
+	static Igra& GetInstance() {
+		static Igra instance;
+		return instance;
+	}
+	void Init();
+	void Events();
+	void Update();
+	void Draw();
+	void Clean();
+	bool _shouldClose;
+};
+
