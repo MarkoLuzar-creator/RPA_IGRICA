@@ -4,10 +4,10 @@
 #include "../CORE/TEXTURE/Texture.h"
 #include "../CORE/CAMERA/Camera.h"
 #include "../IGRA/MiniMap.h"
-#include "../CORE/PHYSICS/Math.h"
 #include "../CORE/VECTOR/Vector.h"
 #include "../CORE/PHYSICS/RigidBody.h"
 #include "../CORE/ANIMATION/Animation.h"
+#include "../src/Igra.h"
 #include <iostream>
 
 void Igralec::SetProperties(std::string idleAnimationID, float x, float y, int width, int height, SDL_RendererFlip flip) {
@@ -82,19 +82,19 @@ void Igralec::Update() {
     m_Origin->m_X = m_Position->m_X;
     m_Origin->m_Y = m_Position->m_Y;
 
-    if (m_Origin->m_X > MiniMap::worldSize) {
-        m_Position->m_X = -MiniMap::worldSize + 500 - m_Size->m_X / 2;
+    if (m_Origin->m_X > WorldSettings::worldSize) {
+        m_Position->m_X = -WorldSettings::worldSize;
         m_Origin->m_X = m_Position->m_X + m_Size->m_X / 2;
     }
-    else if (m_Origin->m_X < -MiniMap::worldSize) {
-        m_Position->m_X = MiniMap::worldSize - 500 - m_Size->m_X / 2;
+    else if (m_Origin->m_X < -WorldSettings::worldSize) {
+        m_Position->m_X = WorldSettings::worldSize - 500 - m_Size->m_X / 2;
         m_Origin->m_X = m_Position->m_X + m_Size->m_X / 2;
-    }else if (m_Origin->m_Y > MiniMap::worldSize) {
-        m_Position->m_Y = -MiniMap::worldSize + 500 - m_Size->m_Y / 2;
+    }else if (m_Origin->m_Y > WorldSettings::worldSize) {
+        m_Position->m_Y = -WorldSettings::worldSize + 500 - m_Size->m_Y / 2;
         m_Origin->m_Y = m_Position->m_Y + m_Size->m_Y / 2;
     }
-    else if (m_Origin->m_Y < -MiniMap::worldSize) {
-        m_Position->m_Y = MiniMap::worldSize - 500 - m_Size->m_Y / 2;
+    else if (m_Origin->m_Y < -WorldSettings::worldSize) {
+        m_Position->m_Y = WorldSettings::worldSize - 500 - m_Size->m_Y / 2;
         m_Origin->m_Y = m_Position->m_Y + m_Size->m_Y / 2;
     }
 }

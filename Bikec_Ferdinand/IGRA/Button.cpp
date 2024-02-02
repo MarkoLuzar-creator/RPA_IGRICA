@@ -8,21 +8,21 @@
 #include <iostream>
 
 
-Button::Button(const char* baseTexturePath, const char* hoverTexturePath, int x, int y, int w, int h, float scale, SDL_Renderer* r, SDL_RendererFlip flip, ButtonTypes buttonType){
+Button::Button(const char* baseTexturePath, const char* hoverTexturePath, const char* level, int x, int y, int w, int h, float scale, SDL_Renderer* r, SDL_RendererFlip flip, ButtonTypes buttonType){
 	_baseTexture = new TextureComponent(hoverTexturePath, x, y, w, h, r, scale, flip);
 	_hoverTexture = new TextureComponent(hoverTexturePath, x, y, w, h, r, scale, flip);
 	_buttonType = buttonType;
+	_level = level;
 }
 
 void Button::Draw(){
-	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
+	if (_level == Level::GetInstance().GetCurrentLevelName()) {
 		_baseTexture->DrawD();
 	}
 }
 
 void Button::Update(){
-	if ("menu" == Level::GetInstance().GetCurrentLevelName()) {
-
+	if (_level == Level::GetInstance().GetCurrentLevelName()) {
 
 		SDL_Rect button = _baseTexture->_hitbox;
 		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1};

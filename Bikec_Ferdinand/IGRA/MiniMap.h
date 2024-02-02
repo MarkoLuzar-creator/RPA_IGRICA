@@ -4,6 +4,7 @@
 #include "../CORE/PHYSICS/Vector2D.h"
 #include "../CORE/PHYSICS/RigidBody.h"
 #include "../CORE/ANIMATION/Animation.h"
+#include "../IGRA/Lab.h"
 
 class MiniMap{
 public:
@@ -11,10 +12,9 @@ public:
 		static MiniMap instance;
 		return instance;
 	}
-	virtual void Draw();
+	virtual void Draw(Lab& l);
 	virtual void Update();
 	void SetProperties(std::string mapTextureID, float x, float y, int width, int height, SDL_RendererFlip flip);
-	static float worldSize;
 	static float viewDistance;
 private:
 	MiniMap(){}

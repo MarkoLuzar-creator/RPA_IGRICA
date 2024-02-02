@@ -8,6 +8,8 @@ public:
 	Vector2D operator+(const Vector2D& v2);
 	Vector2D operator-(const Vector2D& v2);
 	Vector2D operator*(const float scalar);
+	float GetDistance(const Vector2D& v2);
+	Vector2D GetDirectionVector(const Vector2D& v2);
 	void TranslateX(float velocityX);
 	void TranslateY(float velocityY);
 	void Translate(Vector2D velocityXY, float magnitude);

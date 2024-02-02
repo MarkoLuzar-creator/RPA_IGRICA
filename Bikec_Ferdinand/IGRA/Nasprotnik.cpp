@@ -4,7 +4,6 @@
 #include "../CORE/VECTOR/Vector.h"
 #include "../CORE/TIMER/Timer.h"
 #include "../CORE/CAMERA/Camera.h"
-#include "../CORE/PHYSICS/Math.h"
 #include "../IGRA/Igralec.h"
 
 Nasprotnik::Nasprotnik(std::string animationTexture, float x, float y, int width, int height, SDL_RendererFlip flip, std::string levelName){
@@ -34,9 +33,9 @@ void Nasprotnik::Update(){
         m_Animation->SetProperties(m_BaseTextureID, 0, 8, 50, m_Flip);
         m_RigidBody->ResetForce();
 
-        if (Math::GetInstance().GetDistanceFromPoints(*m_Position, Igralec::GetInstance().GetOrigin()) < 8000) {
-            Vector2D v = Math::GetInstance().GetDirectionVector(*m_Position, Igralec::GetInstance().GetOrigin());
-            m_Position->Translate(v, 1.5);
+        if (m_Position->GetDistance(Igralec::GetInstance().GetOrigin()) < 8000) {
+            Vector2D v = m_Position->GetDirectionVector(Igralec::GetInstance().GetOrigin());
+            m_Position->Translate(v, 5);
         }
 
         m_RigidBody->Update(Timer::GetInstance().GetDeltaTime());

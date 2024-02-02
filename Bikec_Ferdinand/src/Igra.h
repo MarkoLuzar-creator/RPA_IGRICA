@@ -1,4 +1,9 @@
 #pragma once
+
+struct WorldSettings {
+	static const int worldSize = 10000;
+};
+
 class Igra{
 public:
 	static Igra& GetInstance() {

@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Igra.cpp" />
-    <ClCompile Include="IGRA\Laboratoriji.cpp" />
+    <ClCompile Include="IGRA\Lab.cpp" />
     <ClCompile Include="CORE\ANIMATION\Animation.cpp" />
     <ClCompile Include="CORE\LEVEL\Level.cpp" />
     <ClCompile Include="CORE\INPUT\Input.cpp" />
@@ -156,15 +156,16 @@
     <ClCompile Include="CORE\PHYSICS\Vector2D.cpp" />
     <ClCompile Include="CORE\TEXTURE\Texture.cpp" />
     <ClCompile Include="CORE\TIMER\Timer.cpp" />
-    <ClCompile Include="IGRA\Ozadje.cpp" />
+    <ClCompile Include="IGRA\Sprite.cpp" />
     <ClCompile Include="IGRA\MiniMap.cpp" />
     <ClCompile Include="IGRA\Nasprotnik.cpp" />
     <ClCompile Include="CORE\TextureComponent.cpp" />
+    <ClCompile Include="IGRA\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\engine.h" />
     <ClInclude Include="src\Igra.h" />
-    <ClInclude Include="IGRA\Laboratoriji.h" />
+    <ClInclude Include="IGRA\Lab.h" />
     <ClInclude Include="IGRA\Igralec.h" />
     <ClInclude Include="CORE\CAMERA\Camera.h" />
     <ClInclude Include="CORE\ANIMATION\Animation.h" />
@@ -177,11 +178,11 @@
     <ClInclude Include="CORE\TEXTURE\Texture.h" />
     <ClInclude Include="CORE\TIMER\Timer.h" />
     <ClInclude Include="IGRA\Button.h" />
-    <ClInclude Include="IGRA\Ozadje.h" />
+    <ClInclude Include="IGRA\Sprite.h" />
     <ClInclude Include="IGRA\MiniMap.h" />
     <ClInclude Include="IGRA\Nasprotnik.h" />
-    <ClInclude Include="CORE\PHYSICS\Math.h" />
     <ClInclude Include="CORE\TextureComponent.h" />
+    <ClInclude Include="IGRA\World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
