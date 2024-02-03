@@ -75,7 +75,7 @@ void Igra::Init(){
 
 	Level::GetInstance().LoadLevels("menu");
 	Level::GetInstance().LoadLevels("level1");
-	Level::GetInstance().LoadLevels("options");
+	Level::GetInstance().LoadLevels("options ");
 
 }
 
@@ -96,21 +96,20 @@ void Igra::Events(){
 }
 
 void Igra::Update(){
-	Window::GetInstance().WindowClear();
 	Timer::GetInstance().Tick();
+	{
+		gumb_za_igro->Update();
+		gumb_za_nastavitve->Update();
+		gumb_za_izhod->Update();
+		meni_ozadje->Update();
+		svet->Update();
+		laboratoriji->Update();
+	}
 
-	meni_ozadje->Update();
-	meni_ozadje->Draw();
-
-	gumb_za_igro->Update();
-	gumb_za_nastavitve->Update();
-	gumb_za_izhod->Update();
-
-	svet->Update();
-	laboratoriji->Update();
+	Igralec::GetInstance().Update();
 
 	MiniMap::GetInstance().Update();
-	Igralec::GetInstance().Update();
+
 
 	for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {
 		i->Update();
@@ -119,19 +118,29 @@ void Igra::Update(){
 }
 
 void Igra::Draw(){
-	svet->Draw();
-	Igralec::GetInstance().Draw();
+	Window::GetInstance().WindowClear();
+	{
+		meni_ozadje->Draw();
+		svet->Draw();
+		laboratoriji->Draw();
 
-	gumb_za_igro->Draw();
-	gumb_za_nastavitve->Draw();
-	gumb_za_izhod->Draw();
-	laboratoriji->Draw();
+		gumb_za_igro->DrawBase();
+		gumb_za_nastavitve->DrawBase();
+		gumb_za_izhod->DrawBase();
+		gumb_za_igro->DrawHover();
+		gumb_za_nastavitve->DrawHover();
+		gumb_za_izhod->DrawHover();
+	}
+
 	MiniMap::GetInstance().Draw(*laboratoriji);
 
 	for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {
 		i->Draw();
 	}
 	Camera::GetInstance().Update(Igralec::GetInstance().GetOrigin());
+
+	Igralec::GetInstance().Draw();
+	
 
 	Window::GetInstance().WindowRender();
 }

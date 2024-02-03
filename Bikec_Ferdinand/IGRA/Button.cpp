@@ -15,9 +15,19 @@ Button::Button(const char* baseTexturePath, const char* hoverTexturePath, const 
 	_level = level;
 }
 
-void Button::Draw(){
+void Button::DrawBase(){
 	if (_level == Level::GetInstance().GetCurrentLevelName()) {
 		_baseTexture->DrawD();
+	}
+}
+
+void Button::DrawHover(){
+	if (_level == Level::GetInstance().GetCurrentLevelName()) {
+		SDL_Rect button = _baseTexture->_hitbox;
+		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1 };
+		if (SDL_HasIntersection(&mouse, &button)) {
+			_hoverTexture->DrawD();
+		}
 	}
 }
 
@@ -27,18 +37,14 @@ void Button::Update(){
 		SDL_Rect button = _baseTexture->_hitbox;
 		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1};
 
-		if (SDL_HasIntersection(&mouse, &button)) {
-			_hoverTexture->DrawD();
-
-			if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT)) {
-				switch (_buttonType) {
-				case ButtonTypes::Play: Level::GetInstance().NextLevel(); break;
-				case ButtonTypes::Exit: exit(0); break;
-				case ButtonTypes::Options: Level::GetInstance().SetLevel("options"); break;
-				case ButtonTypes::Home: Level::GetInstance().SetLevel("menu"); break;
-				}
-				Input::GetInstance().UpdateMouseClicks();
+		if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT)) {
+			switch (_buttonType) {
+			case ButtonTypes::Play: Level::GetInstance().NextLevel(); break;
+			case ButtonTypes::Exit: exit(0); break;
+			case ButtonTypes::Options: Level::GetInstance().SetLevel("options"); break;
+			case ButtonTypes::Home: Level::GetInstance().SetLevel("menu"); break;
 			}
+			Input::GetInstance().UpdateMouseClicks();
 		}
 	}
 }

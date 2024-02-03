@@ -1,6 +1,7 @@
 #include "World.h"
 #include "../CORE/LEVEL/Level.h"
 #include <iostream>
+#include <random>
 
 World::World(const char* level){
 	_level = level;

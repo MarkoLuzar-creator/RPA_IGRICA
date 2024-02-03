@@ -10,8 +10,8 @@ int main() {
 	Igra::GetInstance().Init();
 	while (!Igra::GetInstance()._shouldClose) {
 		Igra::GetInstance().Events();
-		Igra::GetInstance().Update();
 		Igra::GetInstance().Draw();
+		Igra::GetInstance().Update();
 	}
 	Igra::GetInstance().Clean();
 
