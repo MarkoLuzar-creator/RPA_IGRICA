@@ -48,7 +48,7 @@
     <ClCompile Include="IGRA\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IGRA\Igralec.cpp">
+    <ClCompile Include="IGRA\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IGRA\MiniMap.cpp">
@@ -67,6 +67,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IGRA\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CORE\AnimationComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,7 +110,7 @@
     <ClInclude Include="IGRA\Sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IGRA\Igralec.h">
+    <ClInclude Include="IGRA\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGRA\MiniMap.h">
@@ -129,6 +132,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGRA\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CORE\AnimationComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

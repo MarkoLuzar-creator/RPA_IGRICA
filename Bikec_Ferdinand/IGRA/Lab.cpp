@@ -1,7 +1,6 @@
 #include "Lab.h"
+#include "../IGRA/Player.h"
 #include "../CORE/LEVEL/Level.h"
-#include "../IGRA/Igralec.h"
-
 
 Lab::Lab(const char* level){
     _level = level;
@@ -36,7 +35,7 @@ void Lab::Draw(){
 
 void Lab::Update(){
     if (_level == Level::GetInstance().GetCurrentLevelName() && _index < _vect.size() - 1) {
-        if (SDL_HasIntersection(&Igralec::GetInstance().GetHitBox(), &_vect.at(_index)._texture->_hitbox)) {
+        if (SDL_HasIntersection(&Player::GetInstance().GetHitBox(), &_vect.at(_index)._texture->_hitbox)) {
             _index++;
         }
     }

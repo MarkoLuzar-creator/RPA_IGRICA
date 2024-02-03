@@ -1,7 +1,8 @@
 #pragma once
 
 struct WorldSettings {
-	static const int worldSize = 10000;
+	static const int worldSize;
+	static const float scale;
 };
 
 class Igra{

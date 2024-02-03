@@ -2,7 +2,7 @@
 #include "../CORE/TEXTURE/Texture.h"
 #include "../CORE/LEVEL/Level.h"
 #include "../CORE/VECTOR/Vector.h"
-#include "../IGRA/Igralec.h"
+#include "../IGRA/Player.h"
 #include "../CORE/INPUT/Input.h"
 
 #include <iostream>
@@ -16,7 +16,7 @@ void MiniMap::Draw(Lab& l){
 
         
         if (l.GetLevel() == Level::GetInstance().GetCurrentLevelName()) {
-            if (Igralec::GetInstance().GetOrigin().GetDistance(l.GetIndexLab()._texture->_position) < viewDistance) {
+            if (Player::GetInstance().GetOrigin().GetDistance(l.GetIndexLab()._texture->_position) < viewDistance) {
 
                 TextureComponent t(*l.GetIndexLab()._texture);
                 t._position.m_X = m_Position->m_X + (t._position.m_X / m_MapScale);
@@ -27,10 +27,10 @@ void MiniMap::Draw(Lab& l){
         }
 
         for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {
-            if (Igralec::GetInstance().GetOrigin().GetDistance(i->GetPosition()) < viewDistance)
+            if (Player::GetInstance().GetOrigin().GetDistance(i->GetPosition()) < viewDistance)
                 Texture::GetInstance().DrawStatic("nasprotnik", m_Position->m_X + i->GetPosition().m_X / m_MapScale, m_Position->m_Y + i->GetPosition().m_Y / m_MapScale, 1920, 1920, SDL_FLIP_NONE, 0.005);
         }
-        Texture::GetInstance().DrawStatic("igralec", m_Position->m_X + Igralec::GetInstance().GetOrigin().m_X / m_MapScale, m_Position->m_Y + Igralec::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, SDL_FLIP_NONE, 0.005);
+        Texture::GetInstance().DrawStatic("igralec", m_Position->m_X + Player::GetInstance().GetOrigin().m_X / m_MapScale, m_Position->m_Y + Player::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, SDL_FLIP_NONE, 0.005);
     }
 }
 

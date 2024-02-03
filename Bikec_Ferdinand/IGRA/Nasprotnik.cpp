@@ -4,7 +4,7 @@
 #include "../CORE/VECTOR/Vector.h"
 #include "../CORE/TIMER/Timer.h"
 #include "../CORE/CAMERA/Camera.h"
-#include "../IGRA/Igralec.h"
+#include "../IGRA/Player.h"
 
 Nasprotnik::Nasprotnik(std::string animationTexture, float x, float y, int width, int height, SDL_RendererFlip flip, std::string levelName){
     m_Origin = new Vector2D(x + width / 2, y + height / 2);
@@ -33,8 +33,8 @@ void Nasprotnik::Update(){
         m_Animation->SetProperties(m_BaseTextureID, 0, 8, 50, m_Flip);
         m_RigidBody->ResetForce();
 
-        if (m_Position->GetDistance(Igralec::GetInstance().GetOrigin()) < 8000) {
-            Vector2D v = m_Position->GetDirectionVector(Igralec::GetInstance().GetOrigin());
+        if (m_Position->GetDistance(Player::GetInstance().GetOrigin()) < 8000) {
+            Vector2D v = m_Position->GetDirectionVector(Player::GetInstance().GetOrigin());
             m_Position->Translate(v, 5);
         }
 
@@ -46,7 +46,7 @@ void Nasprotnik::Update(){
         m_Origin->m_X = m_Position->m_X + m_Size->m_X / 2;
         m_Origin->m_Y = m_Position->m_Y + m_Size->m_Y / 2;
 
-        if (SDL_HasIntersection(&m_Hitbox, &Igralec::GetInstance().GetHitBox())) {
+        if (SDL_HasIntersection(&m_Hitbox, &Player::GetInstance().GetHitBox())) {
             exit(0);
         }
     }

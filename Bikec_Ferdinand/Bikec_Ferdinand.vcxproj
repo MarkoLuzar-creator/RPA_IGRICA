@@ -143,12 +143,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CORE\AnimationComponent.cpp" />
     <ClCompile Include="src\Igra.cpp" />
     <ClCompile Include="IGRA\Lab.cpp" />
     <ClCompile Include="CORE\ANIMATION\Animation.cpp" />
     <ClCompile Include="CORE\LEVEL\Level.cpp" />
     <ClCompile Include="CORE\INPUT\Input.cpp" />
-    <ClCompile Include="IGRA\Igralec.cpp" />
+    <ClCompile Include="IGRA\Player.cpp" />
     <ClCompile Include="IGRA\Button.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="CORE\WINDOW\Window.cpp" />
@@ -163,10 +164,11 @@
     <ClCompile Include="IGRA\World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CORE\AnimationComponent.h" />
     <ClInclude Include="Engine\engine.h" />
     <ClInclude Include="src\Igra.h" />
     <ClInclude Include="IGRA\Lab.h" />
-    <ClInclude Include="IGRA\Igralec.h" />
+    <ClInclude Include="IGRA\Player.h" />
     <ClInclude Include="CORE\CAMERA\Camera.h" />
     <ClInclude Include="CORE\ANIMATION\Animation.h" />
     <ClInclude Include="CORE\WINDOW\Window.h" />

@@ -4,7 +4,6 @@
 #include "../CORE/LEVEL/Level.h"
 #include "../CORE/INPUT/Input.h"
 #include "../CORE/CAMERA/Camera.h"
-#include "Igralec.h"
 #include <iostream>
 
 
