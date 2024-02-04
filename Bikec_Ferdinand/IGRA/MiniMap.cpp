@@ -19,22 +19,18 @@ void MiniMap::Draw(Lab& l, Enemy& e){
         _texture->DrawS();
         
         if (Player::GetInstance().GetOrigin().GetDistance(l.GetIndexLab()._texture->_position) < WorldSettings::viewDistance) {
-            TextureComponent t(*l.GetIndexLab()._texture);
-            t._position.m_X = _texture->_position.m_X + t._position.m_X / m_MapScale;
-            t._position.m_Y = _texture->_position.m_Y + t._position.m_Y / m_MapScale;
-            t._scale = 0.02;
-            t.DrawS();
+            LegacyTexture::GetInstance().CreateTexture(l.GetIndexLab()._texture->_filePath);
+            LegacyTexture::GetInstance().DrawS(l.GetIndexLab()._texture->_filePath, _texture->_position.m_X + l.GetIndexLab()._texture->_position.m_X / m_MapScale, _texture->_position.m_Y + l.GetIndexLab()._texture->_position.m_Y / m_MapScale, l.GetIndexLab()._texture->_size.m_X, l.GetIndexLab()._texture->_size.m_Y, &Window::GetInstance().GetRenderer(), 0.05, SDL_FLIP_NONE);
         }
              
         for (std::vector<E>::iterator it = e.GetVect().begin(); it != e.GetVect().end(); it++) {
             if (Player::GetInstance().GetOrigin().GetDistance(it->_animation->_texture->_position) < WorldSettings::viewDistance) {
-                //TextureComponent t("../Assets/nasprotnik.png", _texture->_position.m_X + it->_animation->_texture->_position.m_X / m_MapScale, _texture->_position.m_Y + it->_animation->_texture->_position.m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
-                //t.DrawS();
+                LegacyTexture::GetInstance().CreateTexture("../Assets/nasprotnik.png");
+                LegacyTexture::GetInstance().DrawS("../Assets/nasprotnik.png", _texture->_position.m_X + it->_animation->_texture->_position.m_X / m_MapScale, _texture->_position.m_Y + it->_animation->_texture->_position.m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
             }
         }
-        
-        TextureComponent t("../Assets/player.png", _texture->_position.m_X + Player::GetInstance().GetOrigin().m_X / m_MapScale, _texture->_position.m_Y + Player::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
-        t.DrawS();
+        LegacyTexture::GetInstance().CreateTexture("../Assets/player.png");
+        LegacyTexture::GetInstance().DrawS("../Assets/player.png", _texture->_position.m_X + Player::GetInstance().GetOrigin().m_X / m_MapScale, _texture->_position.m_Y + Player::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
     }
 }
 

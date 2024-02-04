@@ -52,3 +52,30 @@ void TextureComponent::DrawD(){
 	SDL_Rect hitbox = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 	_hitbox = hitbox;
 }
+
+
+void LegacyTexture::CreateTexture(const char* filePath){
+	if (m_TextureMap[filePath] == nullptr) {
+		SDL_Surface* surface = IMG_Load(filePath);
+		if (surface == nullptr) {
+			std::cout << SDL_GetError() << ": Wrong File Path" << std::endl;
+		}
+
+		SDL_Texture* texture = SDL_CreateTextureFromSurface(&Window::GetInstance().GetRenderer(), surface);
+		if (texture == nullptr) {
+			std::cout << SDL_GetError() << ": Failed To Create Texture" << std::endl;
+		}
+		m_TextureMap[filePath] = texture;
+		std::cout << "lol";
+	}
+}
+
+void LegacyTexture::DrawS(const char* filePath, int x, int y, int width, int height, SDL_Renderer* renderer, float scale, SDL_RendererFlip f){
+	Vector2D offset;
+	Vector2D pos = Window::GetInstance().GetScalePosition(x, y, width * scale, height * scale, offset);
+	Vector2D size = Window::GetInstance().GetScaleSize(width * scale, height * scale);
+
+	SDL_Rect srcRect = { 0, 0, width, height };
+	SDL_Rect destRect = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
+	SDL_RenderCopyEx(&Window::GetInstance().GetRenderer(), m_TextureMap[filePath], &srcRect, &destRect, 0, nullptr, f);
+}

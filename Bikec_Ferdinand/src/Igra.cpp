@@ -20,8 +20,8 @@
 
 
 const int WorldSettings::worldSize = 10000;
-const int WorldSettings::viewDistance = 8000;
-const float WorldSettings::scale = 0.5f;
+const int WorldSettings::viewDistance = 5000;
+const float WorldSettings::scale = 1.0f;
 
 Button* gumb_za_igro;
 Button* gumb_za_nastavitve;
@@ -54,7 +54,7 @@ void Igra::Init(){
 			svet->Push("../Assets/pesek.jpg", x, y, 1000, 1000, 1.0f, Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
 		}
 	}
-	for (int i = 0; i < 15; i++) {
+	for (int i = 0; i < 5000; i++) {
 		int x = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		int y = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		nasprotniki->Push("../Assets/player_jump.png", x, y, 64, 64, 0, 8, 50, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
