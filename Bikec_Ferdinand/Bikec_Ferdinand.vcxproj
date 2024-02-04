@@ -159,7 +159,7 @@
     <ClCompile Include="CORE\TIMER\Timer.cpp" />
     <ClCompile Include="IGRA\Sprite.cpp" />
     <ClCompile Include="IGRA\MiniMap.cpp" />
-    <ClCompile Include="IGRA\Nasprotnik.cpp" />
+    <ClCompile Include="IGRA\Enemy.cpp" />
     <ClCompile Include="CORE\TextureComponent.cpp" />
     <ClCompile Include="IGRA\World.cpp" />
   </ItemGroup>
@@ -174,7 +174,6 @@
     <ClInclude Include="CORE\WINDOW\Window.h" />
     <ClInclude Include="CORE\PHYSICS\RigidBody.h" />
     <ClInclude Include="CORE\PHYSICS\Vector2D.h" />
-    <ClInclude Include="CORE\VECTOR\Vector.h" />
     <ClInclude Include="CORE\LEVEL\Level.h" />
     <ClInclude Include="CORE\INPUT\Input.h" />
     <ClInclude Include="CORE\TEXTURE\Texture.h" />
@@ -182,7 +181,7 @@
     <ClInclude Include="IGRA\Button.h" />
     <ClInclude Include="IGRA\Sprite.h" />
     <ClInclude Include="IGRA\MiniMap.h" />
-    <ClInclude Include="IGRA\Nasprotnik.h" />
+    <ClInclude Include="IGRA\Enemy.h" />
     <ClInclude Include="CORE\TextureComponent.h" />
     <ClInclude Include="IGRA\World.h" />
   </ItemGroup>

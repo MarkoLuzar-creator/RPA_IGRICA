@@ -1,6 +1,6 @@
 #pragma once
-#include "../CORE/TextureComponent.h"
 #include <vector>
+#include "../CORE/TextureComponent.h"
 
 struct Tile {
 	TextureComponent* _texture;

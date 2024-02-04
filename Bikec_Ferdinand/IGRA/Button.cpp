@@ -1,6 +1,5 @@
 ﻿#include "Button.h"
 #include "../CORE/TEXTURE/Texture.h"
-#include "../CORE/VECTOR/Vector.h"
 #include "../CORE/LEVEL/Level.h"
 #include "../CORE/INPUT/Input.h"
 #include "../CORE/CAMERA/Camera.h"

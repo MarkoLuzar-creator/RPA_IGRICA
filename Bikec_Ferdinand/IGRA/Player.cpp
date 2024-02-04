@@ -1,7 +1,6 @@
 #include "Player.h"
 #include "../CORE/TIMER/Timer.h"
 #include "../CORE/INPUT/Input.h"
-#include "../CORE/VECTOR/Vector.h"
 #include "../CORE/PHYSICS/RigidBody.h"
 #include "../src/Igra.h"
 #include "../CORE/LEVEL/Level.h"

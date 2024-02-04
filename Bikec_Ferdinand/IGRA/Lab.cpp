@@ -1,6 +1,7 @@
 #include "Lab.h"
 #include "../IGRA/Player.h"
 #include "../CORE/LEVEL/Level.h"
+#include <iostream>
 
 Lab::Lab(const char* level){
     _level = level;

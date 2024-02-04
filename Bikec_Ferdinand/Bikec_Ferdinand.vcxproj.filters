@@ -57,7 +57,7 @@
     <ClCompile Include="IGRA\Lab.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IGRA\Nasprotnik.cpp">
+    <ClCompile Include="IGRA\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CORE\TextureComponent.cpp">
@@ -81,9 +81,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\PHYSICS\Vector2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CORE\VECTOR\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\LEVEL\Level.h">
@@ -119,7 +116,7 @@
     <ClInclude Include="IGRA\Lab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IGRA\Nasprotnik.h">
+    <ClInclude Include="IGRA\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CORE\TextureComponent.h">

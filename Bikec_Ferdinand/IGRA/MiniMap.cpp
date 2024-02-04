@@ -1,49 +1,45 @@
 #include "MiniMap.h"
 #include "../CORE/TEXTURE/Texture.h"
 #include "../CORE/LEVEL/Level.h"
-#include "../CORE/VECTOR/Vector.h"
 #include "../IGRA/Player.h"
 #include "../CORE/INPUT/Input.h"
-
+#include "../src/Igra.h"
 #include <iostream>
 
-float MiniMap::viewDistance = 8000;
+
 bool toggle = 0;
 
-void MiniMap::Draw(Lab& l){
-    if (Level::GetInstance().GetCurrentLevelName() != "menu" && Level::GetInstance().GetCurrentLevelName() != "options" && toggle) {
-        Texture::GetInstance().DrawStatic(m_BaseTextureID, m_Position->m_X, m_Position->m_Y, 600, 600, m_Flip);
+void MiniMap::Init(){
+    _texture = new TextureComponent("../Assets/miniMap.jpg", Window::GetInstance().GetSize().m_X / 2 - 600 / 2, Window::GetInstance().GetSize().m_Y / 2 - 600 / 2, 600, 600, &Window::GetInstance().GetRenderer(), 1.0f, SDL_FLIP_NONE);
+}
 
+
+void MiniMap::Draw(Lab& l, Enemy& e){
+    if ("menu" != Level::GetInstance().GetCurrentLevelName() && "options" != Level::GetInstance().GetCurrentLevelName() && toggle) {
+        _texture->DrawS();
         
-        if (l.GetLevel() == Level::GetInstance().GetCurrentLevelName()) {
-            if (Player::GetInstance().GetOrigin().GetDistance(l.GetIndexLab()._texture->_position) < viewDistance) {
-
-                TextureComponent t(*l.GetIndexLab()._texture);
-                t._position.m_X = m_Position->m_X + (t._position.m_X / m_MapScale);
-                t._position.m_Y = m_Position->m_Y + (t._position.m_Y / m_MapScale);
-                t._scale = 0.02;
-                t.DrawS();
+        if (Player::GetInstance().GetOrigin().GetDistance(l.GetIndexLab()._texture->_position) < WorldSettings::viewDistance) {
+            TextureComponent t(*l.GetIndexLab()._texture);
+            t._position.m_X = _texture->_position.m_X + t._position.m_X / m_MapScale;
+            t._position.m_Y = _texture->_position.m_Y + t._position.m_Y / m_MapScale;
+            t._scale = 0.02;
+            t.DrawS();
+        }
+             
+        for (std::vector<E>::iterator it = e.GetVect().begin(); it != e.GetVect().end(); it++) {
+            if (Player::GetInstance().GetOrigin().GetDistance(it->_animation->_texture->_position) < WorldSettings::viewDistance) {
+                //TextureComponent t("../Assets/nasprotnik.png", _texture->_position.m_X + it->_animation->_texture->_position.m_X / m_MapScale, _texture->_position.m_Y + it->_animation->_texture->_position.m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
+                //t.DrawS();
             }
         }
-
-        for (Nasprotnik* i : Vector::GetInstance().m_SeznamNasprotnikov) {
-            if (Player::GetInstance().GetOrigin().GetDistance(i->GetPosition()) < viewDistance)
-                Texture::GetInstance().DrawStatic("nasprotnik", m_Position->m_X + i->GetPosition().m_X / m_MapScale, m_Position->m_Y + i->GetPosition().m_Y / m_MapScale, 1920, 1920, SDL_FLIP_NONE, 0.005);
-        }
-        Texture::GetInstance().DrawStatic("igralec", m_Position->m_X + Player::GetInstance().GetOrigin().m_X / m_MapScale, m_Position->m_Y + Player::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, SDL_FLIP_NONE, 0.005);
+        
+        TextureComponent t("../Assets/player.png", _texture->_position.m_X + Player::GetInstance().GetOrigin().m_X / m_MapScale, _texture->_position.m_Y + Player::GetInstance().GetOrigin().m_Y / m_MapScale, 1920, 1920, &Window::GetInstance().GetRenderer(), 0.005, SDL_FLIP_NONE);
+        t.DrawS();
     }
 }
 
-bool change = 1;
 void MiniMap::Update(){
     if (Input::GetInstance().GetKeyPressed(SDL_SCANCODE_M)) {
         toggle = !toggle;
     }
-}
-
-void MiniMap::SetProperties(std::string mapTextureID, float x, float y, int width, int height, SDL_RendererFlip flip){
-    m_BaseTextureID = mapTextureID;
-    m_Position = new Vector2D(x, y);
-    m_Size = new Vector2D(width, height);
-    m_Flip = flip;
 }

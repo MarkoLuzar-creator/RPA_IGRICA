@@ -2,6 +2,7 @@
 
 struct WorldSettings {
 	static const int worldSize;
+	static const int viewDistance;
 	static const float scale;
 };
 
