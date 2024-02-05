@@ -12,8 +12,7 @@ public:
 	void Push(const char* file, int x, int y, int w, int h, float s, SDL_Renderer& r, SDL_RendererFlip f);
 	void Draw();
 	void Update();
-	const char* GetLevel();
-	void Clear();
+	std::vector<Tile>& GetVect();
 private:
 	const char* _level;
 	std::vector<Tile> _vect;

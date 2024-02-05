@@ -30,10 +30,6 @@ void World::Update(){
 	}
 }
 
-const char* World::GetLevel(){
-	return _level;
-}
-
-void World::Clear(){
-	_vect.clear();
+std::vector<Tile>& World::GetVect(){
+	return _vect;
 }

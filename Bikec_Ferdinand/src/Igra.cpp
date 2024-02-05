@@ -51,15 +51,21 @@ void Igra::Init(){
 	}
 	for (int x = -WorldSettings::worldSize - 2000; x < WorldSettings::worldSize + 2000; x += 1000) {
 		for (int y = -WorldSettings::worldSize - 2000; y < WorldSettings::worldSize + 2000; y += 1000) {
+			bool z = rand() % (2);
+			if (z)
 			svet->Push("../Assets/pesek.jpg", x, y, 1000, 1000, 1.0f, Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
+			else
+			svet->Push("../Assets/kamen.jpg", x, y, 1000, 1000, 1.0f, Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
 		}
 	}
-	for (int i = 0; i < 5000; i++) {
+	for (int i = 0; i < 1000; i++) {
 		int x = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		int y = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		nasprotniki->Push("../Assets/player_jump.png", x, y, 64, 64, 0, 8, 50, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
 	}
-	MiniMap::GetInstance().Init();
+	MiniMap::GetInstance().LoadWorld(*svet);
+	MiniMap::GetInstance().LoadEnemy(*nasprotniki);
+	MiniMap::GetInstance().LoadLab(*laboratoriji);
 
 	Level::GetInstance().LoadLevels("menu");
 	Level::GetInstance().LoadLevels("level1");
@@ -112,7 +118,7 @@ void Igra::Draw(){
 		gumb_za_nastavitve->DrawHover();
 		gumb_za_izhod->DrawHover();
 		nasprotniki->Draw();
-		MiniMap::GetInstance().Draw(*laboratoriji, *nasprotniki);
+		MiniMap::GetInstance().Draw();
 		Player::GetInstance().Draw();
 		Camera::GetInstance().Update(Player::GetInstance().GetOrigin());
 	}
