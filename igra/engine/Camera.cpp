@@ -1,17 +1,43 @@
 #include "Camera.h"
 #include "Window.h"
+#include "Timer.h"
+#include "Player.h"
 
-void Camera::SetOriginPosition(int x, int y){
-	m_ViewBox = { 0, 0, (int)Window::GetInstance().GetSize().m_X, (int)Window::GetInstance().GetSize().m_X };
-	m_Origin = Vector2D(x, y);
+void Camera::SetTarget(Vector2D& target){
+	_target = &target;
 }
 
-void Camera::Update(Vector2D target){
-	m_ViewBox.x = target.m_X - m_Origin.m_X / 2;
-	m_ViewBox.y = target.m_Y - m_Origin.m_Y / 2;
-	m_Position = Vector2D(m_ViewBox.x, m_ViewBox.y);
+void Camera::SetTargetReturn(Vector2D& go, Vector2D& ret){
+	_go = &go;
+	_return = &ret;
+	_arrive = false;
+}
+
+void Camera::Update(){
+	if (_return == nullptr) {
+		_position = *_target;
+	}
+	else {
+		if (!_arrive) {
+			Vector2D dir = _position.GetDirectionVector(*_go);
+			if (_position.GetDistance(*_go) > 50) {
+				_position.Translate(dir, 5);
+			}
+			else {
+				_arrive = true;
+			}
+		}
+		else {
+			Vector2D dir = _position.GetDirectionVector(*_return);
+			if (_position.GetDistance(*_return) > 50) {
+				_position.Translate(dir, 5);
+				_return = nullptr;
+			}
+		}
+	}
 }
 
 Vector2D& Camera::GetPosition(){
-	return m_Position;
+	return _position;
 }
+

@@ -31,7 +31,7 @@ void Igra::Init(){
     SDL_Init(SDL_INIT_EVERYTHING) != 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
     Window::GetInstance().CreateWindow(1920, 1080, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
 	Player::GetInstance().Init("level1", 0, 0, 64, 64, WorldSettings::scale, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
-	Camera::GetInstance().SetOriginPosition(0, 0);
+	Camera::GetInstance().SetTarget(Player::GetInstance().GetOrigin());
 	gumb_za_igro = new Button("../assets/Gumbi1/igraj.png", "../assets/Gumbi1/igraj.png", "menu", 0, -214, 301, 204, WorldSettings::scale, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Play);
 	gumb_za_nastavitve = new Button("../assets/Gumbi0/nastavitve.png", "../assets/Gumbi1/nastavitve.png", "menu", 0, 0, 301, 204, WorldSettings::scale, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Options);
 	gumb_za_izhod = new Button("../assets/Gumbi0/izhod.png", "../assets/Gumbi1/izhod.png", "menu", 0, 214, 301, 204, WorldSettings::scale, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE, ButtonTypes::Exit);
@@ -82,6 +82,7 @@ void Igra::Events(){
 	if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_ESCAPE)) {
 		_shouldClose = true;
 	}
+
 }
 
 void Igra::Update(){
@@ -115,7 +116,7 @@ void Igra::Draw(){
 		nasprotniki->Draw();
 		MiniMap::GetInstance().Draw();
 		Player::GetInstance().Draw();
-		Camera::GetInstance().Update(Player::GetInstance().GetOrigin());
+		Camera::GetInstance().Update();
 	}
 	Window::GetInstance().WindowRender();
 }

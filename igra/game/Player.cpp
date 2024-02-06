@@ -15,7 +15,7 @@ void Player::Init(const char* level, int x, int y, int w, int h, float s, SDL_Re
 }
 
 
-Vector2D Player::GetOrigin(){
+Vector2D& Player::GetOrigin(){
     return *_position;
 }
 
@@ -54,16 +54,16 @@ void Player::Update() {
         _movingR->Update();
 
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_A)) {
-            m_RigidBody->ApplyForceX(-40);
+            m_RigidBody->ApplyForceX(-10);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_D)) {
-            m_RigidBody->ApplyForceX(40);
+            m_RigidBody->ApplyForceX(10);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_W)) {
-            m_RigidBody->ApplyForceY(-40);
+            m_RigidBody->ApplyForceY(-10);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_S)) {
-            m_RigidBody->ApplyForceY(40);
+            m_RigidBody->ApplyForceY(10);
         }
         m_RigidBody->Update(Timer::GetInstance().GetDeltaTime());
         _position->TranslateX(m_RigidBody->GetPosition().m_X);

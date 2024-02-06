@@ -12,7 +12,7 @@ public:
 	void Draw();
 	void Update();
 	void Init(const char* level, int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f);
-	Vector2D GetOrigin();
+	Vector2D& GetOrigin();
 	SDL_Rect& GetHitBox();
 private:
 	const char* _level;

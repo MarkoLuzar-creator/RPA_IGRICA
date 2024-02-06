@@ -67,7 +67,6 @@ void LegacyTexture::CreateTexture(const char* filePath){
 			std::cout << SDL_GetError() << ": Failed To Create Texture" << std::endl;
 		}
 		m_TextureMap[filePath] = texture;
-		std::cout << "lol";
 	}
 }
 

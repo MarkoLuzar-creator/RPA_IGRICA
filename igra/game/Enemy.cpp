@@ -38,6 +38,9 @@ void Enemy::Update() {
             it->_rigidBody->Update(Timer::GetInstance().GetDeltaTime());
             it->_animation->_texture->_position.TranslateX(it->_rigidBody->GetPosition().m_X);
             it->_animation->_texture->_position.TranslateY(it->_rigidBody->GetPosition().m_Y);
+            if (SDL_HasIntersection(&it->_animation->_texture->_hitbox, &Player::GetInstance().GetHitBox())) {
+                it->_animation->_texture->_size = Vector2D(0, 0);
+            }
         }
         else {
             break;
