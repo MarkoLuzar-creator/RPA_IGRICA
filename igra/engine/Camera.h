@@ -11,12 +11,14 @@ public:
         return instance;
     }
     void SetTarget(Vector2D& target);
-    void SetTargetReturn(Vector2D& go, Vector2D& ret);
+    void SetAnimationTarget(Vector2D& target);
     void Update();
+    void UpdateAnimation();
     Vector2D& GetPosition();
 private:
     Camera(){}
-    Vector2D* _target, *_return, *_go, _position;
+    Vector2D* _target, _position;
+    Vector2D* _animationTarget;
     bool _arrive;
 };
 

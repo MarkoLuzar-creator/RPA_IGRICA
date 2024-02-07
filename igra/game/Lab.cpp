@@ -37,8 +37,7 @@ void Lab::Update(){
     if (_level == Level::GetInstance().GetCurrentLevelName() && _index < _vect.size() - 1) {
         if (SDL_HasIntersection(&Player::GetInstance().GetHitBox(), &_vect.at(_index)._texture->_hitbox)) {
             _index++;
-            Camera::GetInstance().SetTargetReturn(_vect[_index]._texture->_position, Player::GetInstance().GetOrigin());
-            //Camera::GetInstance().SetTarget(_vect[_index]._texture->_position);
+            Camera::GetInstance().SetAnimationTarget(_vect[_index]._texture->_position);
         }
     }
 }

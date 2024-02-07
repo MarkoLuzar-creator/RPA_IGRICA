@@ -32,10 +32,10 @@ void Player::Draw(){
             _movingR->DrawD();
         }
         else if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_W)) {
-
+            _movingR->DrawD();
         }
         else if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_S)) {
-
+            _movingR->DrawD();
         }
         else {
             _base->DrawD();
@@ -54,16 +54,16 @@ void Player::Update() {
         _movingR->Update();
 
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_A)) {
-            m_RigidBody->ApplyForceX(-10);
+            m_RigidBody->ApplyForceX(-20);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_D)) {
-            m_RigidBody->ApplyForceX(10);
+            m_RigidBody->ApplyForceX(20);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_W)) {
-            m_RigidBody->ApplyForceY(-10);
+            m_RigidBody->ApplyForceY(-20);
         }
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_S)) {
-            m_RigidBody->ApplyForceY(10);
+            m_RigidBody->ApplyForceY(20);
         }
         m_RigidBody->Update(Timer::GetInstance().GetDeltaTime());
         _position->TranslateX(m_RigidBody->GetPosition().m_X);

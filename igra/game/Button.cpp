@@ -31,7 +31,7 @@ void Button::Update(){
 		SDL_Rect button = _baseTexture->_hitbox;
 		SDL_Rect mouse = { Input::GetInstance().GetMousePosition().m_X, Input::GetInstance().GetMousePosition().m_Y, 1, 1};
 
-		if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT)) {
+		if (Input::GetInstance().GetMouseClick(SDL_BUTTON_LEFT) && SDL_HasIntersection(&mouse, &button)) {
 			switch (_buttonType) {
 			case ButtonTypes::Play: Level::GetInstance().NextLevel(); break;
 			case ButtonTypes::Exit: exit(0); break;
