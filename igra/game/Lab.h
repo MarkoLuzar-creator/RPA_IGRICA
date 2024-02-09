@@ -20,6 +20,7 @@ public:
 	void Clear();
 private:
 	int _index;
+	bool init = true;
 	const char* _level;
 	std::vector<L> _vect;
 };

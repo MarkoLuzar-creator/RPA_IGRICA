@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "Timer.h"
 #include "Player.h"
+#include "../game/Igra.h"
 
 void Camera::SetTarget(Vector2D& target){
 	_target = &target;
@@ -13,12 +14,14 @@ void Camera::SetAnimationTarget(Vector2D& target){
 
 void Camera::Update(){
 	if (_animationTarget == nullptr) {
+		Player::GetInstance()._canMove = true;
 		_position = *_target;
 	}
 }
 
 void Camera::UpdateAnimation(){
 	if (_animationTarget != nullptr) {
+		Player::GetInstance()._canMove = false;
 		Vector2D dir = _position.GetDirectionVector(*_animationTarget);
 		if (_position.GetDistance(*_animationTarget) > 500) {
 			_position.Translate(dir, 15);

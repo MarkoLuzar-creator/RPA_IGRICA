@@ -1,5 +1,6 @@
 #include "World.h"
 #include <iostream>
+#include <MiniMap.h>
 
 World::World(const char* level){
 	_level = level;
@@ -23,8 +24,11 @@ void World::Draw(){
 }
 
 void World::Update(){
-	for (std::vector<Tile>::iterator it = _vect.begin(); it != _vect.end(); it++) {
-
+	if (_level == Level::GetInstance().GetCurrentLevelName()) {
+		if (init) {
+			MiniMap::GetInstance().LoadWorld(*this);
+			init = false;
+		}
 	}
 }
 

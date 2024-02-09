@@ -16,6 +16,7 @@ public:
 	std::vector<E>& GetVect();
 private:
 	const char* _level;
+	bool init = true;
 	std::vector<E> _vect;
 };
 

@@ -4,14 +4,13 @@
 
 
 
-void Player::Init(const char* level, int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f) {
+void Player::Init(int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f) {
     _base = new AnimationComponent("../assets/player_jump.png", x, y, w, h, 0, 8, 50, s, r, f);
     _movingL = new AnimationComponent("../assets/player_roll.png", x, y, w, h, 0, 8, 50, s, r, f);
     _movingR = new AnimationComponent("../assets/player_roll.png", x, y, w, h, 0, 8, 50, s, r, SDL_FLIP_VERTICAL);
     m_RigidBody = new RigidBody();
     m_RigidBody->SetGravity(0);
     _position = new Vector2D(x + w / 2, y + h / 2);
-    _level = level;
 }
 
 
@@ -24,7 +23,7 @@ SDL_Rect& Player::GetHitBox(){
 }
 
 void Player::Draw(){
-    if (_level == Level::GetInstance().GetCurrentLevelName()) {
+    if (1) {
         if (Input::GetInstance().GetKeyDown(SDL_SCANCODE_A)) {
             _movingL->DrawD();
         }
@@ -44,7 +43,7 @@ void Player::Draw(){
 }
 
 void Player::Update() {
-    if (_level == Level::GetInstance().GetCurrentLevelName()) {
+    if (1 && _canMove) {
         _base->_texture->_position = *_position;
         _movingL->_texture->_position = *_position;
         _movingR->_texture->_position = *_position;

@@ -15,6 +15,7 @@ public:
 	std::vector<Tile>& GetVect();
 private:
 	const char* _level;
+	bool init = true;
 	std::vector<Tile> _vect;
 };
 

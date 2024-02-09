@@ -11,11 +11,11 @@ public:
 	}
 	void Draw();
 	void Update();
-	void Init(const char* level, int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f);
+	void Init(int x, int y, int w, int h, float s, SDL_Renderer* r, SDL_RendererFlip f);
 	Vector2D& GetOrigin();
 	SDL_Rect& GetHitBox();
+	bool _canMove = true;
 private:
-	const char* _level;
 	AnimationComponent* _base;
 	AnimationComponent* _movingL;
 	AnimationComponent* _movingR;

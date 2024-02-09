@@ -1,6 +1,7 @@
 #include "Lab.h"
 #include <iostream>
 #include <Player.h>
+#include <MiniMap.h>
 
 Lab::Lab(const char* level){
     _level = level;
@@ -33,11 +34,19 @@ void Lab::Draw(){
     }
 }
 
+
 void Lab::Update(){
     if (_level == Level::GetInstance().GetCurrentLevelName() && _index < _vect.size() - 1) {
+        if (init) {
+            MiniMap::GetInstance().LoadLab(*this);
+            init = false;
+        }
         if (SDL_HasIntersection(&Player::GetInstance().GetHitBox(), &_vect.at(_index)._texture->_hitbox)) {
             _index++;
             Camera::GetInstance().SetAnimationTarget(_vect[_index]._texture->_position);
+        }
+        if (_index == _vect.size() - 1) {
+            Level::GetInstance().NextLevel();
         }
     }
 }
