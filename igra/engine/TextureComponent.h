@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include <map>
 #include "Vector2D.h"
+#include <SDL_ttf.h>
 
 class TextureComponent{
 public:
@@ -28,5 +29,14 @@ public:
 	void DrawS(const char* filePath, int x, int y, int width, int height, SDL_Renderer* renderer, float scale, SDL_RendererFlip f);
 private:
 	std::map<const char*, SDL_Texture*> m_TextureMap;
+};
+
+class TTFText {
+public:
+	static TTFText& GetInstance() {
+		static TTFText instance;
+		return instance;
+	}
+	void RenderText(const char* msg, int x, int y, const char* font, int size = 20, int r = 255, int g = 255, int b = 255);
 };
 

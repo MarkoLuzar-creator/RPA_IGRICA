@@ -15,6 +15,7 @@ public:
 	Vector2D& GetOrigin();
 	SDL_Rect& GetHitBox();
 	bool _canMove = true;
+	int hp = 100;
 private:
 	AnimationComponent* _base;
 	AnimationComponent* _movingL;

@@ -1,6 +1,7 @@
 #include "Igra.h"
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_ttf.h>
 #include <iostream>
 #include <vector>
 #include <engine.h>
@@ -28,7 +29,10 @@ Enemy* nasprotniki, *nasprotniki2;
 
 void Igra::Init(){
 	_shouldClose = false;
-    SDL_Init(SDL_INIT_EVERYTHING) != 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
+	SDL_Init(SDL_INIT_EVERYTHING);
+	IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
+	TTF_Init();
+
     Window::GetInstance().CreateWindow(1920, 1080, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
 	Player::GetInstance().Init(0, 0, 64, 64, WorldSettings::scale, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
 	Camera::GetInstance().SetTarget(Player::GetInstance().GetOrigin());
@@ -145,6 +149,9 @@ void Igra::Draw(){
 		Player::GetInstance().Draw();
 		Camera::GetInstance().Update();
 		Camera::GetInstance().UpdateAnimation();
+		std::string str = std::to_string(SDL_GetTicks64() / 1000.0f);
+		TTFText::GetInstance().RenderText(str.c_str(), 10, 70, "../assets/font.ttf", 60);
+
 	}
 	Window::GetInstance().WindowRender();
 }
@@ -152,4 +159,5 @@ void Igra::Draw(){
 void Igra::Clean(){
     SDL_Quit();
     IMG_Quit();
+	TTF_Quit();
 }

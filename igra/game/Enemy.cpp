@@ -45,6 +45,7 @@ void Enemy::Update() {
                 it->_animation->_texture->_position.TranslateX(it->_rigidBody->GetPosition().m_X);
                 it->_animation->_texture->_position.TranslateY(it->_rigidBody->GetPosition().m_Y);
                 if (SDL_HasIntersection(&it->_animation->_texture->_hitbox, &Player::GetInstance().GetHitBox())) {
+                    Player::GetInstance().hp -= 50;
                     _vect.erase(it);
                     break;
                 }

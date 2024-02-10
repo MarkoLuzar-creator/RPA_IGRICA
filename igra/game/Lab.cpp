@@ -31,6 +31,9 @@ void Lab::Push(const char* file, int x, int y, int w, int h, float s, SDL_Render
 void Lab::Draw(){
     if (_level == Level::GetInstance().GetCurrentLevelName()) {
         _vect.at(_index)._texture->DrawD();
+        std::string num = std::to_string(_vect.size() - _index - 1);
+        std::string msg = "stevilo aren: " + num;
+        TTFText::GetInstance().RenderText(msg.c_str(), 10, 140, "../assets/font.ttf", 60);
     }
 }
 
@@ -43,10 +46,9 @@ void Lab::Update(){
         }
         if (SDL_HasIntersection(&Player::GetInstance().GetHitBox(), &_vect.at(_index)._texture->_hitbox)) {
             _index++;
-            Camera::GetInstance().SetAnimationTarget(_vect[_index]._texture->_position);
-        }
-        if (_index == _vect.size() - 1) {
-            Level::GetInstance().NextLevel();
+            if (_index != _vect.size() - 1)
+                Camera::GetInstance().SetAnimationTarget(_vect[_index]._texture->_position);
+            else Level::GetInstance().NextLevel();
         }
     }
 }

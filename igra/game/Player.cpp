@@ -39,11 +39,16 @@ void Player::Draw(){
         else {
             _base->DrawD();
         }
+        std::string str = std::to_string(hp);
+        TTFText::GetInstance().RenderText(str.c_str(), 10, 10, "../assets/font.ttf", 60);
     }
 }
 
 void Player::Update() {
     if (1 && _canMove) {
+        if (hp <= 0) {
+            exit(0);
+        }
         _base->_texture->_position = *_position;
         _movingL->_texture->_position = *_position;
         _movingR->_texture->_position = *_position;

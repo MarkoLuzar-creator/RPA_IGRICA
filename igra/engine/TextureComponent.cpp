@@ -35,7 +35,7 @@ void TextureComponent::DrawS(){
 	Vector2D pos = Window::GetInstance().GetScalePosition(_position.m_X, _position.m_Y, _size.m_X * _scale, _size.m_Y * _scale, offset);
 	Vector2D size = Window::GetInstance().GetScaleSize(_size.m_X * _scale, _size.m_Y * _scale);
 
-	SDL_Rect srcRect = { 0, 0, _size.m_X, _size.m_Y };
+	SDL_Rect srcRect = { 0, 0, size.m_X, size.m_Y };
 	SDL_Rect destRect = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 	SDL_RenderCopyEx(_renderer, _texture, &srcRect, &destRect, 0, nullptr, _flip);
 	SDL_Rect hitbox = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
@@ -78,4 +78,26 @@ void LegacyTexture::DrawS(const char* filePath, int x, int y, int width, int hei
 	SDL_Rect srcRect = { 0, 0, width, height };
 	SDL_Rect destRect = { pos.m_X, pos.m_Y, size.m_X, size.m_Y };
 	SDL_RenderCopyEx(&Window::GetInstance().GetRenderer(), m_TextureMap[filePath], &srcRect, &destRect, 0, nullptr, f);
+}
+
+
+void TTFText::RenderText(const char* msg, int x, int y, const char* font, int size, int r, int g, int b){
+	TTF_Font* f;
+	if (!(f = TTF_OpenFont(font, size))) {
+		std::cout << SDL_GetError() << ": Failed to open the font " << std::endl;
+	}
+	SDL_Color c = { r, g, b };
+	SDL_Surface* m = TTF_RenderText_Solid(f, msg, c);
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(&Window::GetInstance().GetRenderer(), m);
+
+	int w, h;
+	TTF_SizeText(f, msg, &w, &h);
+
+	Vector2D offset;
+	Vector2D sizee = Window::GetInstance().GetScaleSize(w, h);
+
+
+	SDL_Rect srcRect = { 0, 0, sizee.m_X, sizee.m_Y };
+	SDL_Rect destRect = { x, y, sizee.m_X, sizee.m_Y };
+	SDL_RenderCopyEx(&Window::GetInstance().GetRenderer(), texture, &srcRect, &destRect, 0, nullptr, SDL_FLIP_NONE);
 }
