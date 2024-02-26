@@ -65,7 +65,7 @@ void Igra::Init(){
 		int y = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		nasprotniki->Push("../assets/player_jump.png", x, y, 64, 64, 0, 8, 50, 1.0f, &Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
 	}
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 5; i++) {
 		int x = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		int y = rand() % (2 * WorldSettings::worldSize) - WorldSettings::worldSize;
 		laboratoriji2->Push("../assets/arena.png", x, y, 1152, 1152, WorldSettings::scale, Window::GetInstance().GetRenderer(), SDL_FLIP_NONE);
@@ -88,6 +88,7 @@ void Igra::Init(){
 	Level::GetInstance().LoadLevels("menu");
 	Level::GetInstance().LoadLevels("level1");
 	Level::GetInstance().LoadLevels("level2");
+	Level::GetInstance().LoadLevels("level3");
 	Level::GetInstance().LoadLevels("options ");
 
 }
