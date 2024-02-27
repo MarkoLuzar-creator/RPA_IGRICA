@@ -1,0 +1,209 @@
+﻿  AnimationComponent.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(20,166): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(20,126): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(20,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(20,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(21,113): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(21,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,79): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,79): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,102): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,102): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,123): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(23,123): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,27): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,36): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(24,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,44): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,44): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,54): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(26,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(32,166): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(32,126): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(32,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(32,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(33,113): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(33,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,79): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,79): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,102): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,102): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,123): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(35,123): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,27): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,36): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(36,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,44): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,44): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,54): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\AnimationComponent.cpp(38,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Camera.cpp
+  Igra.cpp
+  Lab.cpp
+  Level.cpp
+  Input.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Input.cpp(10,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Input.cpp(10,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Player.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(13,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(13,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(79,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(82,45): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(85,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Player.cpp(88,45): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  Button.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(21,61): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(21,61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(21,106): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(21,106): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(32,61): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(32,61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(32,106): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\Button.cpp(32,106): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\main.cpp(7,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Window.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(11,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(11,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(14,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(14,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(75,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Window.cpp(75,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  RigidBody.cpp
+  Vector2D.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Vector2D.cpp(26,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Timer.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\Timer.cpp(9,27): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  Sprite.cpp
+  MiniMap.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(16,137): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(16,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(15,140): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(22,377): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(22,333): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(22,292): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(22,197): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(22,113): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(28,290): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(28,184): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(28,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(32,274): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(32,170): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\game\MiniMap.cpp(32,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Enemy.cpp
+  TextureComponent.cpp
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(18,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(18,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(19,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(19,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,68): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(24,68): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(35,116): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(35,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(35,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(35,65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(36,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(36,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(38,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(38,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(38,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(38,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,27): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,36): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(39,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,44): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,44): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,54): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(41,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(47,116): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(47,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(47,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(47,65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(48,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(48,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(50,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(50,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(50,45): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(50,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,27): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,36): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(51,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,44): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,44): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,54): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(53,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(75,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(75,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(76,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(76,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,27): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,36): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(79,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(89,18): warning C4838: conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(89,21): warning C4838: conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(89,24): warning C4838: conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(100,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(100,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(100,45): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(100,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(101,35): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(101,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(101,46): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\Marko\Desktop\RPA_IGRICA\igra\engine\TextureComponent.cpp(101,46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  World.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 559 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Bikec_Ferdinand.vcxproj -> C:\Users\Marko\Desktop\RPA_IGRICA\igra\x64\Release\Bikec_Ferdinand.exe
